@@ -1,0 +1,15 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+
+# Output
+blog_post_output.md
+
+# IDEs
+.vscode/
+.idea/
