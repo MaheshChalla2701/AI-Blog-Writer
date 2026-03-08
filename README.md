@@ -16,6 +16,20 @@ An autonomous AI agent crew that researches, writes, and edits professional blog
 - **Markdown Output**: Generates perfectly formatted Markdown files ready for publication.
 
 ## 🤖 How It Works
+The crew operates in a sequential process where each agent's output becomes the input for the next:
+
+```mermaid
+graph TD
+    A[Topic Input] --> B(Senior Tech Researcher)
+    B -->|Research Data| C(Content Writer)
+    C -->|Draft Post| D(Chief Editor)
+    D -->|Polished Post| E[blog_post_output.md]
+    
+    style B fill:#f96,stroke:#333,stroke-width:2px
+    style C fill:#69f,stroke:#333,stroke-width:2px
+    style D fill:#6f9,stroke:#333,stroke-width:2px
+```
+
 1. **Senior Tech Researcher**: Uncovers groundbreaking technologies and trends.
 2. **Content Writer**: Transforms research into a compelling storytelling narrative.
 3. **Chief Editor**: Polishes the draft, ensures SEO optimization, and cleans up formatting.
@@ -55,6 +69,28 @@ The easiest way to run the project is using the included runner script:
 - `requirements.txt`: Python package dependencies.
 - `run.bat`: A simple shortcut to run the tool.
 - `blog_post_output.md`: The generated output from your last run.
+
+## 📸 Execution Screenshots
+Here is a look at the CrewAI Blog Writer in action:
+
+### 1. Crew & Researcher Startup
+![Crew Start](assets/Screenshot%202026-03-08%20115254.png)
+
+### 2. Researcher Working
+![Researcher Results](assets/Screenshot%202026-03-08%20115308.png)
+
+### 3. Writer Starting
+![Writer Start](assets/Screenshot%202026-03-08%20115327.png)
+
+### 4. Content Writer Output
+![Writer Results](assets/Screenshot%202026-03-08%20115354.png)
+
+### 5. Chief Editor Formatting
+![Editor Start](assets/Screenshot%202026-03-08%20115405.png)
+
+### 6. Final Polished Result
+![Final Result](assets/Screenshot%202026-03-08%20115422.png)
+![Crew Completion](assets/Screenshot%202026-03-08%20115447.png)
 
 ---
 Built with [CrewAI](https://crewai.com) and [Groq](https://groq.com).
